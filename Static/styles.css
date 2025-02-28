@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
@@ -40,7 +40,7 @@ h2 {
   color: #333;
 }
 
-p {
+.para-about {
   line-height: 1.6;
 }
 
@@ -66,4 +66,13 @@ button:hover {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+}
+
+.copyright {
+  color: #acacac;
+}
+
+.job {
+  margin-bottom: 16px;
+  padding: 8px;
 }
