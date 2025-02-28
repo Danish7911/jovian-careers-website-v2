@@ -16,37 +16,40 @@
     />
   </head>
   <body>
-    <h1>Jovian Careers</h1>
+    {% include 'nav.html' %}
     <img
       src="{{ url_for('static', filename='images/banner1.jpg') }}"
       alt="banner"
-      class="banner mt-2 mb-4"
+      class="banner"
     />
+    <h1>Jovian Careers</h1>
     <hr />
     <div class="openings mt-2">
       <h2 class="mb-4">Open Position</h2>
       <p>{%for job in jobs%} {% include 'job-item.html' %} {%endfor%}</p>
       <div class="button-container">
-        <button>Contact Us</button>
+        <a class="button-cu" href="mailto:hello@jovian.ai?subject=Question%20about%20Job%20Openings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20Question%20%3A%20%3Center%20your%20question%20here%3E">Contact Us</a>
       </div>
     </div>
     <br />
-    <div class="container">
+    <div class="container row">
       <h2>About Jovian</h2>
-      <p class="lead para-about">
-        Jovian is a platform for finding and applying to jobs in the field of
-        data science. We help Engineers find their dream jobs, and help
-        companies find the best talent. Our platform connects job seekers with
-        top employers in the industry, providing a seamless and efficient job
-        search experience. Join Jovian today and take the next step in your
-        career!
-      </p>
+      <div class="col-md-6">
+        <p class="lead para-about">
+          Jovian is a platform for finding and applying to jobs in the field of
+          data science. We help Engineers find their dream jobs, and help
+          companies find the best talent. Our platform connects job seekers with
+          top employers in the industry, providing a seamless and efficient job
+          search experience. Join Jovian today and take the next step in your
+          career!
+        </p>
+      </div>
+      <div class="d-none d-md-block col-6">
+        <img src="/static/images/people.jpg" alt="people" class="people-img" />
+      </div>
     </div>
-    <div class="copyright mt-4">
-      <p class="text-center">
-        &copy; 2025 Jovian Careers. All rights reserved.
-      </p>
-    </div>
+    <div class="copyright mt-4"></div>
+    {% include 'footer.html' %}
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
